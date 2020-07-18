@@ -10,6 +10,9 @@ const app = express();
 //Config cors
 app.use(cors());
 
+// read and parse of body
+app.use(express.json());
+
 console.log(process.env.PORT);
 // databse
 dbConnection();
