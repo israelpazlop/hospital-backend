@@ -17,12 +17,9 @@ dbConnection();
 // mean_user
 
 //Routes
-app.get('/', (rq, res) => {
-    res.status(400).json({
-        ok: true,
-        msg: 'Hola Mundo'
-    });
-});
+app.use('/api/users', require('./routes/users'));
+
+
 
 app.listen(process.env.PORT, () => {
     console.log('Server running in ' + process.env.PORT);
